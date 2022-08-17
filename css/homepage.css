@@ -37,6 +37,7 @@ input[type=number] {
   margin: auto;
   padding-left: 15px;
   padding-right: 15px;
+  position: relative;
 }
 @media ((min-width:768px)) {
   .container {
@@ -72,4 +73,32 @@ input[type=number] {
 }
 .header .logo h1 {
   font-size: 25px;
+}
+.header .nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header .nav ul {
+  display: flex;
+}
+.header .nav ul li {
+  height: 72px;
+  padding: 0px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 16px;
+}
+.header .nav ul li i {
+  margin-left: 3px;
+  color: #A9A9A9;
+}
+.header .nav ul li ul {
+  display: none;
+}
+.header .nav ul.active i {
+  transform: rotate(90deg);
 }/*# sourceMappingURL=homepage.css.map */

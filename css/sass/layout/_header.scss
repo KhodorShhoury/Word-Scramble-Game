@@ -16,5 +16,37 @@
             }
         }
     }
+    .nav{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        ul{
+            display: flex;
+            li{
+                height: 72px;
+                padding: 0px 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font : {
+                    weight :800;
+                    size: 16px;
+                }
+                i{
+                    margin-left: 3px;
+                    color: $gray-color;
+                }
+                ul{
+                    display: none;
+                }
+            }  
+            &.active{
+                i{
+                    transform: rotate(90deg);
+                }
+            }         
+        }
+    }
     
 }
