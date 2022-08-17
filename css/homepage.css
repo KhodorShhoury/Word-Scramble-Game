@@ -1,0 +1,75 @@
+/* global rules */
+* {
+  padding: 0;
+  margin: 0;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+textarea,
+button {
+  border: none;
+  outline: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.container {
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media ((min-width:768px)) {
+  .container {
+    width: 750px;
+  }
+}
+@media ((min-width:992px)) {
+  .container {
+    width: 970px;
+  }
+}
+@media ((min-width:1200px)) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.header {
+  -o-box-shadow: 0 0 10px #ddd;
+  -ms-box-shadow: 0 0 10px #ddd;
+  box-shadow: 0 0 10px #ddd;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+}
+.header .logo h1 {
+  font-size: 25px;
+}/*# sourceMappingURL=homepage.css.map */

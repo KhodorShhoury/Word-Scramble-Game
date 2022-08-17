@@ -1,0 +1,17 @@
+// import variables
+@import "sass/helpers/variables";
+// import mixins
+@import "sass/helpers/mixins";
+// /import global rules
+@import "sass/layout/global-rules.scss";
+// import grid system
+@import "sass/layout/grid";
+// import homepage
+@import "sass/pages/homepage";
+// import header
+@import "sass/layout/header";
+// import buttons
+@import "sass/components/buttons";
+// import footer
+@import "sass/layout/footer";
+

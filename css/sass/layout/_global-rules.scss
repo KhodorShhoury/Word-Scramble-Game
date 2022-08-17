@@ -1,0 +1,31 @@
+/* global rules */
+* {
+    padding: 0;
+    margin: 0;
+   @include prefixer(box-sizing,border-box,$prefixes);
+  }
+  
+body{
+  font : {
+    family : 'Roboto', sans-serif;
+    size: 16px;
+  } 
+}
+
+  a {
+    text-decoration: none;
+  }
+  ul,ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  input,
+  textarea,
+  button {
+    border: none;
+    outline: none;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
