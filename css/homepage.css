@@ -29,6 +29,10 @@ button {
   outline: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 input[type=number] {
   -moz-appearance: textfield;
 }
@@ -88,15 +92,15 @@ input[type=number] {
   align-items: center;
   justify-content: flex-end;
 }
-.header .nav ul {
+.header .nav .main-links {
   display: flex;
 }
-.header .nav ul li {
+.header .nav .main-links li {
   position: relative;
   font-weight: 800;
   font-size: 16px;
 }
-.header .nav ul li a {
+.header .nav .main-links li a {
   height: 72px;
   padding: 0px 20px;
   display: flex;
@@ -106,16 +110,16 @@ input[type=number] {
   cursor: pointer;
 }
 @media ((max-width:767px)) {
-  .header .nav ul li {
+  .header .nav .main-links li {
     font-weight: 800;
     font-size: 12px;
   }
 }
-.header .nav ul li i {
+.header .nav .main-links li i {
   margin-left: 3px;
   color: #A9A9A9;
 }
-.header .nav ul li ul {
+.header .nav .main-links li ul {
   display: none;
   flex-direction: column;
   background-color: white;
@@ -128,29 +132,33 @@ input[type=number] {
   -ms-box-shadow: 0 0 10px #ddd;
   box-shadow: 0 0 10px #ddd;
 }
-.header .nav ul li ul li {
+.header .nav .main-links li ul li {
   width: 100%;
   padding: 10px;
   cursor: pointer;
 }
-.header .nav ul li ul li:not(:last-child) {
+.header .nav .main-links li ul li:not(:last-child) {
   border-bottom: 1px solid #DDD;
 }
-.header .nav ul li ul li:hover {
+.header .nav .main-links li ul li:hover {
   background-color: #DDD;
 }
-.header .nav ul.active i {
+.header .nav .main-links li.active i {
   transform: rotate(90deg);
+}
+.header .nav .main-links li.active ul {
+  display: flex;
 }
 .header .nav .follow-github {
   background-color: #171515;
   color: white;
   font-weight: 700;
-  padding: 10px;
+  padding: 12px 10px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
 }
 .header .nav .follow-github i {
   margin-right: 5px;
@@ -165,7 +173,7 @@ input[type=number] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 80px;
+  gap: 50px;
 }
 .main .reversed-word {
   display: flex;
@@ -204,8 +212,10 @@ input[type=number] {
   border: 2px solid #A9A9A9;
 }
 .main .inputs .buttons {
-  display: flex;
+  display: grid;
   align-items: center;
+  justify-content: center;
+  grid-template-columns: auto auto;
   gap: 20px;
 }
 .main .inputs .buttons button {
@@ -213,6 +223,13 @@ input[type=number] {
   background-color: #242582;
   color: white;
 }
-.main .inputs .buttons button.refresh {
-  background-color: #A9A9A9;
+.main .inputs .buttons button.refresh-button {
+  background-color: #6C757D;
+}
+.main .inputs .buttons button.check-button {
+  background-color: black;
+}
+.main .inputs .buttons button.start-game-button {
+  position: relative;
+  left: calc(50% + 10px);
 }/*# sourceMappingURL=homepage.css.map */

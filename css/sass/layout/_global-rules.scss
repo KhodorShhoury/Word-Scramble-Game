@@ -26,6 +26,9 @@ body{
     border: none;
     outline: none;
   }
+  button{
+    cursor: pointer;
+  }
   input[type="number"] {
     -moz-appearance: textfield;
   }

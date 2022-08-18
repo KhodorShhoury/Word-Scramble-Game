@@ -29,7 +29,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        ul{
+        .main-links{
             display: flex;
             li{
                 position: relative;
@@ -76,24 +76,32 @@
                         &:hover{
                             background-color: $light-gray-color;
                         }
+                        
                     }
                 }
+                &.active{
+                    i{
+                        transform: rotate(90deg);
+                    }
+                    ul{
+                        display: flex;
+                    }
+                }         
             }  
-            &.active{
-                i{
-                    transform: rotate(90deg);
-                }
-            }         
+            
         }
         .follow-github{
             background-color: $github-color;
             color: white;
             font-weight: 700;
-            padding: 10px;
+            padding: 12px 10px;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
+            font : {
+                size : 14px;
+            }
             i{
                 margin-right: 5px;
             }

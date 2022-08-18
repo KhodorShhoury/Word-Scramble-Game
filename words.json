@@ -1,0 +1,250 @@
+[
+    {
+        "easy" : [
+            {
+                "word" : "privacy",
+                "hint" : "keeping yourself and your personal information data safe when off and online"
+            },
+            {
+                "word" : "media",
+                "hint" : "mobiles, ipads, laptops, television, newspapers, facebook, instagram..."
+            },
+            {
+                "word" : "Google",
+                "hint" : "no need for hint LOL"
+            },
+            {
+                "word" : "number",
+                "hint" : "Math symbol used for counting"
+            },
+            {
+                "word" : "country",
+                "hint" : "A politically identified region"
+            },
+            {
+                "word" : "group",
+                "hint" : "A number of objects or persons"
+            },
+            {
+                "word" : "taste",
+                "hint" : "Ability of tongue to detect flavour"
+            },
+            {
+                "word" : "store",
+                "hint" : "Large shop where goods are traded"
+            },
+            {
+                "word" : "field",
+                "hint" : "Area of land for farming activities"
+            },
+            {
+                "word" : "friend",
+                "hint" : "Person other than a family member"
+            },
+            {
+                "word" : "pocket",
+                "hint" : "A bag for carrying small items"
+            },
+            {
+                "word" : "needle",
+                "hint" : "A thin and sharp metal pin"
+            },
+            {
+                "word" : "expert",
+                "hint" : "Person with extensive knowledge"
+            },
+            {
+                "word" : "position",
+                "hint" : "location of someone or something"
+            },
+            {
+                "word" : "Islam",
+                "hint" : "Region"
+            },
+            {
+                "word" : "football",
+                "hint" : "sport"
+            },
+            {
+                "word" : "tongue",
+                "hint" : "The muscular organ of mouth"
+            },
+            {
+                "word" : "comfort",
+                "hint" : "A pleasant feeling of relaxation"
+            },
+            {
+                "word" : "garden",
+                "hint" : "Space for planting flower and plant"
+            },
+            {
+                "word" : "Gaming",
+                "hint" : "CSGO,Fortnite,Pubg..."
+            }
+        ],
+        "medium" : [
+            {
+                "word" : "addition",
+                "hint" : "The process of adding numbers"
+            },
+            {
+                "word" : "meeting",
+                "hint" : "Event in which people come together"
+            },
+            {
+                "word" : "exchange",
+                "hint" : "The act of trading"
+            },
+            {
+                "word" : "position",
+                "hint" : "Location of someone or something"
+            },
+            {
+                "word" : "canvas",
+                "hint" : "Piece of fabric for oil painting"
+            },
+            {
+                "word" : "feather",
+                "hint" : "Hair like outer covering of bird"
+            },
+            {
+                "word" : "statement",
+                "hint" : "A declaration of something"
+            },
+            {
+                "word" : "second",
+                "hint" : "One-sixtieth of a minute"
+            },
+            {
+                "word" : "library",
+                "hint" : "Place containing collection of books"
+            },
+            {
+                "word" : "programming",
+                "hint" : "C,C++..."
+            },
+            {
+                "word" : "Mathematics",
+                "hint" : "Equation"
+            },
+            {
+                "word" : "challenge",
+                "hint" : "a call to someone to participate in a competitive situation or fight to decide who is superior in terms of ability or strength"
+            },
+            {
+                "word" : "Element",
+                "hint" : "an essential or characteristic part of something abstract."
+            },
+            {
+                "word" : "feature",
+                "hint" : "a distinctive attribute or aspect of something."
+            },
+            {
+                "word" : "favourite",
+                "hint" : "a person or thing that is preferred to all others of the same kind or is especially well liked."
+            },
+            {
+                "word" : "website",
+                "hint" : "a set of related web pages located under a single domain name"
+            },
+            {
+                "word" : "storage",
+                "hint" : "space available for storing something"
+            },
+            {
+                "word" : "scream",
+                "hint" : "give a long, loud, piercing cry or cries expressing extreme emotion or pain."
+            },
+            {
+                "word" : "absorb",
+                "hint" : "take in or soak up by chemical or physical action."
+            },
+            {
+                "word" : "reduce",
+                "hint" : "make smaller or less in amount, degree, or size."
+            }
+        ],
+        "hard" : [
+            {
+                "word" : "algorithm",
+                "hint" : "a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer."
+            },
+            {
+                "word" : "language",
+                "hint" : "the principal method of human communication"
+            },
+            {
+                "word" : "structure",
+                "hint" : "the arrangement of and relations between the parts or elements of something complex."
+            },
+            {
+                "word" : "environment",
+                "hint" : "the surroundings or conditions in which a person, animal, or plant lives or operates."
+            },
+            {
+                "word" : "architecture",
+                "hint" : "the art or practice of designing and constructing buildings."
+            },
+            {
+                "word" : "highlight",
+                "hint" : "a bright or reflective area in a painting, picture, or design."
+            },
+            {
+                "word" : "example",
+                "hint" : "a thing characteristic of its kind or illustrating a general rule."
+            },
+            {
+                "word" : "civilization",
+                "hint" : "the society, culture, and way of life of a particular area."
+            },
+            {
+                "word" : "flexible",
+                "hint" : "capable of bending easily without breaking."
+            },
+            {
+                "word" : "description",
+                "hint" : "a spoken or written account of a person, object, or event."
+            },
+            {
+                "word" : "essential",
+                "hint" : "absolutely necessary; extremely important."
+            },
+            {
+                "word" : "provision",
+                "hint" : "the action of providing or supplying something for use."
+            },
+            {
+                "word" : "collection",
+                "hint" : "a group of things or people."
+            },
+            {
+                "word" : "substitute",
+                "hint" : "a person or thing acting or serving in place of another."
+            },
+            {
+                "word" : "connection",
+                "hint" : "a relationship in which a person or thing is linked or associated with something else."
+            },
+            {
+                "word" : "playground",
+                "hint" : "an outdoor area provided for children to play in"
+            },
+            {
+                "word" : "conclusion",
+                "hint" : "the end or finish of an event, process, or text."
+            },
+            {
+                "word" : "institute",
+                "hint" : "an organization having a particular purpose"
+            },
+            {
+                "word" : "collaborate",
+                "hint" : "work jointly on an activity or project."
+            },
+            {
+                "word" : "expansion",
+                "hint" : "The process of increase or grow"
+            }
+        ]
+    }
+]
