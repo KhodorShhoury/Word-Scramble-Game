@@ -1,7 +1,10 @@
 //colors
 $main-color :#242582;
 $alt-color : #234566;
+$light-gray-color : #DDD;
 $gray-color : #A9A9A9;
+//social media platforms color
+$github-color : #171515;
 //prefixes
 $prefixes : webkit moz o ms;
 // media queries
@@ -11,3 +14,9 @@ $maxLarge : "(max-width:1199px)";
 $minSmall : "(min-width:768px)";
 $minMedium : "(min-width:992px)";
 $minLarge : "(min-width:1200px)";
+
+//main padding and margin
+$mainPaddingTop : 100px;
+$mainPaddingBottom : 100px;
+$halfPaddingTop : 50px;
+$halfPaddingBottom : 50px;

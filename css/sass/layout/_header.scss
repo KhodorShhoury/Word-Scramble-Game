@@ -4,15 +4,23 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
     }
     .logo{
         display: flex;
         justify-content: center;
         align-items: center;
         height: 72px;
+        text-align: center;
         h1{
+            color: $main-color;
             font : {
                 size: 25px;
+            }
+            @media($maxMobile){
+                font : {
+                    size: 16px;
+                }
             }
         }
     }
@@ -24,14 +32,25 @@
         ul{
             display: flex;
             li{
-                height: 72px;
-                padding: 0px 40px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                position: relative;
+                a{
+                    height: 72px;
+                    padding: 0px 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    cursor: pointer;
+                }
                 font : {
                     weight :800;
                     size: 16px;
+                }
+                @media($maxMobile){
+                    font : {
+                        weight :800;
+                        size: 12px;
+                    }
                 }
                 i{
                     margin-left: 3px;
@@ -39,6 +58,25 @@
                 }
                 ul{
                     display: none;
+                    flex-direction: column;
+                    background-color: white;
+                    width: 150px;
+                    position: absolute;
+                    z-index: 999;
+                    top: 100%;
+                    left: 20px;
+                    @include mainBoxShadow;
+                    li{
+                        width: 100%;
+                        padding: 10px;
+                        cursor: pointer;
+                        &:not(:last-child){
+                            border-bottom: 1px solid $light-gray-color;
+                        }
+                        &:hover{
+                            background-color: $light-gray-color;
+                        }
+                    }
                 }
             }  
             &.active{
@@ -46,6 +84,19 @@
                     transform: rotate(90deg);
                 }
             }         
+        }
+        .follow-github{
+            background-color: $github-color;
+            color: white;
+            font-weight: 700;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                margin-right: 5px;
+            }
         }
     }
     

@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "DynaPuff", cursive;
   font-size: 16px;
 }
 
@@ -64,15 +64,23 @@ input[type=number] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 72px;
+  text-align: center;
 }
 .header .logo h1 {
+  color: #242582;
   font-size: 25px;
+}
+@media ((max-width:767px)) {
+  .header .logo h1 {
+    font-size: 16px;
+  }
 }
 .header .nav {
   flex: 1;
@@ -84,13 +92,24 @@ input[type=number] {
   display: flex;
 }
 .header .nav ul li {
+  position: relative;
+  font-weight: 800;
+  font-size: 16px;
+}
+.header .nav ul li a {
   height: 72px;
-  padding: 0px 40px;
+  padding: 0px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 800;
-  font-size: 16px;
+  flex-wrap: nowrap;
+  cursor: pointer;
+}
+@media ((max-width:767px)) {
+  .header .nav ul li {
+    font-weight: 800;
+    font-size: 12px;
+  }
 }
 .header .nav ul li i {
   margin-left: 3px;
@@ -98,7 +117,102 @@ input[type=number] {
 }
 .header .nav ul li ul {
   display: none;
+  flex-direction: column;
+  background-color: white;
+  width: 150px;
+  position: absolute;
+  z-index: 999;
+  top: 100%;
+  left: 20px;
+  -o-box-shadow: 0 0 10px #ddd;
+  -ms-box-shadow: 0 0 10px #ddd;
+  box-shadow: 0 0 10px #ddd;
+}
+.header .nav ul li ul li {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+.header .nav ul li ul li:not(:last-child) {
+  border-bottom: 1px solid #DDD;
+}
+.header .nav ul li ul li:hover {
+  background-color: #DDD;
 }
 .header .nav ul.active i {
   transform: rotate(90deg);
+}
+.header .nav .follow-github {
+  background-color: #171515;
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav .follow-github i {
+  margin-right: 5px;
+}
+
+.main {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.main .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+.main .reversed-word {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .reversed-word .word {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.main .reversed-word .hint {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.main .time-left .time {
+  color: #242582;
+}
+.main .inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .inputs .enter-word-input {
+  padding: 10px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  -webkit-border: 2px solid #A9A9A9;
+  -moz-border: 2px solid #A9A9A9;
+  -o-border: 2px solid #A9A9A9;
+  -ms-border: 2px solid #A9A9A9;
+  border: 2px solid #A9A9A9;
+}
+.main .inputs .buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.main .inputs .buttons button {
+  padding: 15px 20px;
+  background-color: #242582;
+  color: white;
+}
+.main .inputs .buttons button.refresh {
+  background-color: #A9A9A9;
 }/*# sourceMappingURL=homepage.css.map */

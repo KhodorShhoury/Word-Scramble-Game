@@ -46,8 +46,18 @@
     }
 }
 
-
-//centering
+//horizantal centering
+@mixin horizantalCenterer() {
+    position: absolute;
+    left: 50%;
+    @include prefixer(transform, translateX(-50%), webkit moz o);
+}
+@mixin verticalCenterer() {
+    position: absolute;
+    top: 50%;
+    @include prefixer(transform, translateY(-50%), webkit moz o);
+}
+//horizantal and vertical centering
 @mixin centerer() {
     position: absolute;
     top: 50%;
@@ -60,4 +70,9 @@
     width: $dimension;
     height: $dimension;
     border-radius: 50%;
+}
+
+// main box shadow
+@mixin mainBoxShadow(){
+    @include prefixer(box-shadow, 0 0 10px #ddd,$prefixes);
 }
