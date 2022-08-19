@@ -97,10 +97,6 @@ input[type=number] {
 }
 .header .nav .main-links li {
   position: relative;
-  font-weight: 800;
-  font-size: 16px;
-}
-.header .nav .main-links li a {
   height: 72px;
   padding: 0px 20px;
   display: flex;
@@ -108,6 +104,9 @@ input[type=number] {
   align-items: center;
   flex-wrap: nowrap;
   cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 16px;
 }
 @media ((max-width:767px)) {
   .header .nav .main-links li {
@@ -127,7 +126,7 @@ input[type=number] {
   position: absolute;
   z-index: 999;
   top: 100%;
-  left: 20px;
+  left: -20px;
   -o-box-shadow: 0 0 10px #ddd;
   -ms-box-shadow: 0 0 10px #ddd;
   box-shadow: 0 0 10px #ddd;

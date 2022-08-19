@@ -33,15 +33,14 @@
             display: flex;
             li{
                 position: relative;
-                a{
-                    height: 72px;
-                    padding: 0px 20px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-wrap: nowrap;
-                    cursor: pointer;
-                }
+                height: 72px;
+                padding: 0px 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                cursor: pointer;
+                text-transform: uppercase;
                 font : {
                     weight :800;
                     size: 16px;
@@ -64,7 +63,7 @@
                     position: absolute;
                     z-index: 999;
                     top: 100%;
-                    left: 20px;
+                    left: -20px;
                     @include mainBoxShadow;
                     li{
                         width: 100%;
