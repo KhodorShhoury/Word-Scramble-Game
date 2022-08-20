@@ -228,7 +228,19 @@ input[type=number] {
 .main .inputs .buttons button.check-button {
   background-color: black;
 }
-.main .inputs .buttons button.start-game-button {
+.main .inputs .buttons button.start-end {
   position: relative;
   left: calc(50% + 10px);
+}
+.main .inputs .buttons button.start-game-button {
+  display: none;
+}
+.main .inputs .buttons button.start-game-button.active {
+  display: block;
+}
+.main .inputs .buttons button.end-game-button {
+  display: none;
+}
+.main .inputs .buttons button.end-game-button.active {
+  display: block;
 }/*# sourceMappingURL=homepage.css.map */

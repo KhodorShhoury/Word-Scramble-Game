@@ -63,9 +63,21 @@
                 &.check-button{
                     background-color: black;
                 }
-                &.start-game-button{
+                &.start-end{
                     position: relative;
                     left: calc(50% + 10px);
+                }
+                &.start-game-button{
+                   display: none;
+                   &.active{
+                    display: block;
+                   }
+                }
+                &.end-game-button{
+                   display: none;
+                   &.active{
+                    display: block;
+                   }
                 }
             }
         }

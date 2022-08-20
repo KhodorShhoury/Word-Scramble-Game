@@ -2,11 +2,12 @@
 //declare variables
 let navLinks : Element[] = [...document.querySelectorAll(".nav .main-links .link")];
 let navLinksLI : Element[] = [...document.querySelectorAll(".nav .main-links .link ul li")];
-let levelElement = document.querySelector(".level");
+let levelElement = document.querySelector(".level") as HTMLLIElement;
 let languageElement = document.querySelector(".language");
 let level  = document.querySelector(".current-level")?.getAttribute("data-level") as string;
 let language = document.querySelector(".current-language")?.getAttribute("data-language") as string;
-let currenReversedtWord = document.querySelector(".word") as HTMLHeadingElement;
+let seconds : number;
+let currentShuffledWord = document.querySelector(".word") as HTMLHeadingElement;
 let hintText = document.querySelector(".hint-text") as HTMLSpanElement;
 let timeLeft = document.querySelector(".time") as HTMLSpanElement;
 let answerWord = document.querySelector(".enter-word-input") as HTMLInputElement;
@@ -14,6 +15,7 @@ let answerWord = document.querySelector(".enter-word-input") as HTMLInputElement
 let refreshWordButton = document.querySelector(".refresh-button") as HTMLButtonElement;
 let checkWordButton = document.querySelector(".check-button") as HTMLButtonElement;
 let startGameButton = document.querySelector(".start-game-button") as HTMLButtonElement;
+let endGameButton = document.querySelector(".end-game-button") as HTMLButtonElement;
 //get words from json 
 let myRequest = new XMLHttpRequest();
 myRequest.open("GET","../../words.json");
@@ -29,7 +31,7 @@ myRequest.onloadend = function(){
     }
 }
 //levels object
-let levels : object = {
+let levels : keyable = {
     "easy" : {
         seconds : 30,
     },
@@ -40,6 +42,7 @@ let levels : object = {
         seconds : 15,
     }
 }
+
 //handle navLinks
 navLinks.forEach(link => {
     link.addEventListener("click", handleNavLinks);
@@ -73,35 +76,74 @@ function selectSettings(e : any) : void{
     .innerHTML = currentTarget.getAttribute(`data-${currentTarget.parentNode.parentNode.classList[1]}`);
     if(currentTarget.dataset.level){
         level = currentTarget.dataset.level;
+        seconds = levels[level].seconds;
+        timeLeft.innerHTML = seconds.toString()
     }else if (currentTarget.dataset.language){
         language = currentTarget.dataset.language;
     }
 }
 
 //startGame function
-function startGame() : void{
-    GenerateWord();
+function defaultGameSettings(){
+    level = "easy";
+    levelElement.querySelector("span").innerHTML = level;
+    seconds = levels[level].seconds;
+    language = "english";
+    
 }
 
-function GenerateWord() : void {
-    let randomIndex = Math.floor(Math.random() * Object.keys(mainData[0][level]).length);
-    let selectedWord = mainData[0][level][randomIndex];
-    reverseWord(selectedWord.word);
+function startGame() : void{
+    generateData();
+    countDown();
+    startGameButton.classList.remove("active");
+    endGameButton.classList.add("active");
 }
-function reverseWord(word : String){
-    let reversedWord = word.split("");
-    let wordLen = reversedWord.length,
+
+function generateData() : void {
+    let randomIndex = Math.floor(Math.random() * Object.keys(mainData[0][level]).length);
+    let selectedWord : string = mainData[0][level][randomIndex].word;
+    let hint =  mainData[0][level][randomIndex].hint;
+    shuffleWord(selectedWord);
+    showData(shuffleWord(selectedWord),hint)
+}
+function shuffleWord(word : string) : string{
+    let shuffledWord = word.split("");
+    let wordLen = shuffledWord.length,
     temp,
     randomNum;
     while(wordLen > 0){
         randomNum = Math.floor(Math.random() * wordLen);
         
-        temp = reversedWord[wordLen];
+        temp = shuffledWord[wordLen];
 
-        reversedWord[wordLen] = reversedWord[randomNum];
+        shuffledWord[wordLen] = shuffledWord[randomNum];
 
-        reversedWord[randomNum] = temp;
+        shuffledWord[randomNum] = temp;
         wordLen--;
     }
-    console.log(reversedWord.join(""),word)
+    return shuffledWord.join("")
+}
+//
+function showData(word : string,hint : string){
+    currentShuffledWord.innerHTML = word;
+    hintText.innerHTML = hint;
+}
+//get time
+function countDown(){
+    seconds--;
+
+  let countDownInterval = setInterval(() => {
+        if(seconds > 0){
+            seconds--;
+            timeLeft.innerHTML = seconds.toString();
+        }else{
+            clearInterval(countDownInterval);
+            endGame()
+        }
+        
+    },100)
+}
+
+function endGame(){
+    alert("You Lose");
 }
