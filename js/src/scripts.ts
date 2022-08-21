@@ -124,7 +124,7 @@ function setDefaultGameSettings() : void{
 //start game function
 setDefaultGameSettings();
 function startGame() : void{
-    gameStarted = false;
+    gameStarted = true;
     //get reversed word with hint
     generateData();
     //start startCountDown
@@ -222,7 +222,7 @@ function checkWord(){
     }
 }
 function refreshWord(){
-    gameStarted == true ? generateData() : ""
+    gameStarted == true ? generateData() : "";
 }
 //buttons events
 startGameButton.addEventListener("click",startGame);
