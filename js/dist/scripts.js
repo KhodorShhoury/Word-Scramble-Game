@@ -209,12 +209,13 @@ function endGameWin() {
     answerWord.value = "";
 }
 function checkWord() {
-    if (answerWord.value.toLowerCase() == currentWord.toLowerCase()) {
-        endGameWin();
-    }
-    else {
-        return false;
-    }
+    if (gameStarted == true)
+        if (answerWord.value.toLowerCase() == currentWord.toLowerCase()) {
+            endGameWin();
+        }
+        else {
+            return false;
+        }
 }
 function refreshWord() {
     generateData();

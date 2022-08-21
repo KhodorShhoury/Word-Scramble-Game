@@ -214,6 +214,7 @@ function endGameWin(){
     answerWord.value = "";
 }
 function checkWord(){
+    if(gameStarted == true)
     if(answerWord.value.toLowerCase() == currentWord.toLowerCase()){
         endGameWin()
     }else{
