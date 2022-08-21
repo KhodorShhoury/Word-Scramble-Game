@@ -183,6 +183,11 @@ input[type=number] {
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 800;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .main .reversed-word .hint {
   margin-bottom: 30px;
@@ -221,6 +226,7 @@ input[type=number] {
   padding: 15px 20px;
   background-color: #242582;
   color: white;
+  text-transform: uppercase;
 }
 .main .inputs .buttons button.refresh-button {
   background-color: #6C757D;

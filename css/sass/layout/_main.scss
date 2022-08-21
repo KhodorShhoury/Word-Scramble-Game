@@ -18,6 +18,7 @@
             font : {
                 weight : 800;
             }
+            @include prefixer(user-select,none,$prefixes)
         }
         .hint{
             margin : {
@@ -57,6 +58,7 @@
                 padding: 15px 20px;
                 background-color: $main-color;
                 color: white;
+                text-transform: uppercase;
                 &.refresh-button{
                     background-color: $button-gray-color;
                 }
