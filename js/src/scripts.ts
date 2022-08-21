@@ -222,8 +222,7 @@ function checkWord(){
     }
 }
 function refreshWord(){
-    if(gameStarted == true)
-    generateData();
+    gameStarted == true ? generateData() : ""
 }
 //buttons events
 startGameButton.addEventListener("click",startGame);
