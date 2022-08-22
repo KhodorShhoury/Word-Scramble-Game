@@ -21,8 +21,16 @@ let currentWord : string;
 let hintText = document.querySelector(".hint-text") as HTMLSpanElement;
 //time span element
 let timeLeft = document.querySelector(".time") as HTMLSpanElement;
+//settings
+let levelSetting = document.querySelector(".level-setting span") as HTMLSpanElement;
+let languageSetting = document.querySelector(".language-setting span") as HTMLSpanElement;
+let wordsLengthSetting = document.querySelector(".words-length-setting span") as HTMLSpanElement;
+let timeSetting = document.querySelector(".time-setting span") as HTMLSpanElement;
+let solvedWordsSetting = document.querySelector(".solved-words-setting span") as HTMLSpanElement;
 //input answer
 let answerWord = document.querySelector(".enter-word-input") as HTMLInputElement;
+//solved words array
+let solvedWords : string[] = [];
 //buttons
 //refresh button
 let refreshWordButton = document.querySelector(".refresh-button") as HTMLButtonElement;
@@ -51,6 +59,7 @@ myRequest.onloadend = function(){
     if(this.readyState == 4 && this.status == 200){
         //mainData = array of objects from json file that contains objects contains words
         mainData = JSON.parse(myRequest.responseText);
+        setDefaultGameSettings()
     }
 }
 //available levels object
@@ -109,10 +118,14 @@ function selectSettings(e : any) : void{
     //otherwise user want to change language so change language variable to selected language.
     if(currentTarget.dataset.level){
         level = currentTarget.dataset.level;
+        levelSetting.innerHTML = level;
         seconds = levels[level].seconds;
-        timeLeft.innerHTML = seconds.toString()
+        timeLeft.innerHTML = seconds.toString();
+        timeSetting.innerHTML = seconds.toString();
+        wordsLengthSetting.innerHTML = mainData[0][level].length
     }else if (currentTarget.dataset.language){
         language = currentTarget.dataset.language;
+        languageSetting.innerHTML = language;
     }
 }
 //set Default settings for the game
@@ -122,12 +135,16 @@ function setDefaultGameSettings() : void{
     seconds = levels[level].seconds;
     timeLeft.innerHTML = seconds.toString();
     language = "english";
-    
+    levelSetting.innerHTML = level;
+    timeSetting.innerHTML = seconds.toString()
+    languageSetting.innerHTML = language;
+    wordsLengthSetting.innerHTML = mainData[0][level].length.toString();
+    solvedWordsSetting.innerHTML = solvedWords.length.toString();
 }
 //start game function
-setDefaultGameSettings();
 function startGame() : void{
     gameStarted = true;
+    clearInterval(startCountDownInterval)
     //get reversed word with hint
     generateData();
     //start startCountDown
@@ -143,12 +160,17 @@ function generateData() : void {
     let randomIndex = Math.floor(Math.random() * Object.keys(mainData[0][level]).length);
     //select word 
     currentWord = mainData[0][level][randomIndex].word;
+    if(solvedWords.some(word => word.toLowerCase() == currentWord.toLowerCase())){
+        generateData()
+    }else{
     //get selected word hint
     let hint =  mainData[0][level][randomIndex].hint;
     //shuffle the word
     shuffleWord(currentWord);
     //show word and hint
     showData(shuffleWord(currentWord),hint)
+    }
+    
 }
 //shuffle word
 function shuffleWord(word : string) : string{
@@ -185,16 +207,14 @@ function showData(word : string,hint : string){
 }
 //startCountDown function
 function startCountDown(){
-    seconds--;
-
-   startCountDownInterval = setInterval(() => {
+    seconds = levels[level].seconds;
+   startCountDownInterval =  setInterval(() => {
         if(seconds > 0){
             seconds--;
             timeLeft.innerHTML = seconds.toString();
         }else{
             endGameLose()
         }
-        
     },1000)
 }
 function endGameLose(){
@@ -219,12 +239,22 @@ function endGameWin(){
 }
 function checkWord(){
     if(gameStarted == true)
-    if(answerWord.value.toLowerCase() == currentWord.toLowerCase()){
-        endGameWin()
+    if(parseInt(wordsLengthSetting.innerHTML) !== solvedWords.length){
+        if(answerWord.value.toLowerCase() == currentWord.toLowerCase()){
+            solvedWords.push(answerWord.value);
+            answerWord.value = "";
+            solvedWordsSetting.innerHTML = solvedWords.length.toString();
+            startGame()
+            
+        }else{
+            return false;
+        }
     }else{
-        return false;
+        endGameWin()
     }
+    
 }
+
 function refreshWord(){
     gameStarted == true ? generateData() : "";
 }
