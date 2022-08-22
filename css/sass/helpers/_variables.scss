@@ -8,14 +8,14 @@ $overlay-color :rgba(0, 0, 0, 0.5);
 //social media platforms color
 $github-color : #171515;
 //prefixes
-$prefixes : webkit moz o ms;
+$prefixes : -webkit- -moz- -o- -ms-;
 // media queries
-$maxMobile : "(max-width:767px)";
-$maxSmall : "(max-width:991px)";
-$maxLarge : "(max-width:1199px)";
-$minSmall : "(min-width:768px)";
-$minMedium : "(min-width:992px)";
-$minLarge : "(min-width:1200px)";
+$maxMobile : "max-width:767px";
+$maxSmall : "max-width:991px";
+$maxLarge : "max-width:1199px";
+$minSmall : "min-width:768px";
+$minMedium : "min-width:992px";
+$minLarge : "min-width:1200px";
 
 //main padding and margin
 $mainPaddingTop : 100px;

@@ -2,8 +2,10 @@
 * {
   padding: 0;
   margin: 0;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+  --webkit--box-sizing: border-box;
+  --moz--box-sizing: border-box;
+  --o--box-sizing: border-box;
+  --ms--box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -43,25 +45,27 @@ input[type=number] {
   padding-right: 15px;
   position: relative;
 }
-@media ((min-width:768px)) {
+@media (min-width:768px) {
   .container {
     width: 750px;
   }
 }
-@media ((min-width:992px)) {
+@media (min-width:992px) {
   .container {
     width: 970px;
   }
 }
-@media ((min-width:1200px)) {
+@media (min-width:1200px) {
   .container {
     width: 1170px;
   }
 }
 
 .header {
-  -o-box-shadow: 0 0 10px #ddd;
-  -ms-box-shadow: 0 0 10px #ddd;
+  --webkit--box-shadow: 0 0 10px #ddd;
+  --moz--box-shadow: 0 0 10px #ddd;
+  --o--box-shadow: 0 0 10px #ddd;
+  --ms--box-shadow: 0 0 10px #ddd;
   box-shadow: 0 0 10px #ddd;
 }
 .header .container {
@@ -81,8 +85,12 @@ input[type=number] {
   color: #242582;
   font-size: 25px;
 }
-@media ((max-width:767px)) {
+@media (max-width:767px) {
   .header .logo h1 {
+    --webkit--font-size: 16px;
+    --moz--font-size: 16px;
+    --o--font-size: 16px;
+    --ms--font-size: 16px;
     font-size: 16px;
   }
 }
@@ -108,10 +116,12 @@ input[type=number] {
   font-weight: 800;
   font-size: 16px;
 }
-@media ((max-width:767px)) {
+@media (max-width:767px) {
   .header .nav .main-links li {
     font-weight: 800;
     font-size: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 .header .nav .main-links li i {
@@ -127,8 +137,10 @@ input[type=number] {
   z-index: 999;
   top: 100%;
   left: -20px;
-  -o-box-shadow: 0 0 10px #ddd;
-  -ms-box-shadow: 0 0 10px #ddd;
+  --webkit--box-shadow: 0 0 10px #ddd;
+  --moz--box-shadow: 0 0 10px #ddd;
+  --o--box-shadow: 0 0 10px #ddd;
+  --ms--box-shadow: 0 0 10px #ddd;
   box-shadow: 0 0 10px #ddd;
 }
 .header .nav .main-links li ul li {
@@ -157,7 +169,7 @@ input[type=number] {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
 }
 .header .nav .follow-github i {
   margin-right: 5px;
@@ -183,11 +195,14 @@ input[type=number] {
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 800;
+  --webkit--user-select: none;
+  --moz--user-select: none;
+  --o--user-select: none;
+  --ms--user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .main .reversed-word .hint {
   margin-bottom: 30px;
@@ -222,10 +237,10 @@ input[type=number] {
   margin-right: auto;
   margin-bottom: 20px;
   text-align: center;
-  -webkit-border: 2px solid #A9A9A9;
-  -moz-border: 2px solid #A9A9A9;
-  -o-border: 2px solid #A9A9A9;
-  -ms-border: 2px solid #A9A9A9;
+  --webkit--border: 2px solid #A9A9A9;
+  --moz--border: 2px solid #A9A9A9;
+  --o--border: 2px solid #A9A9A9;
+  --ms--border: 2px solid #A9A9A9;
   border: 2px solid #A9A9A9;
 }
 .main .inputs .buttons {

@@ -13,14 +13,12 @@
         height: 72px;
         text-align: center;
         h1{
-            color: $main-color;
+            color: $main-color; 
             font : {
                 size: 25px;
             }
             @media($maxMobile){
-                font : {
-                    size: 16px;
-                }
+                @include prefixer(font-size,16px,$prefixes)
             }
         }
     }
@@ -50,6 +48,8 @@
                         weight :800;
                         size: 12px;
                     }
+                    padding-right: 10px;
+                    padding-left: 10px;
                 }
                 i{
                     margin-left: 3px;
@@ -99,7 +99,7 @@
             justify-content: center;
             align-items: center;
             font : {
-                size : 14px;
+                size : 12px;
             }
             i{
                 margin-right: 5px;
