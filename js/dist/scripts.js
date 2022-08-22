@@ -222,10 +222,14 @@ function checkWord() {
 function refreshWord() {
     gameStarted == true ? generateData() : "";
 }
-function winPopUp() {
-}
 //buttons events
 startGameButton.addEventListener("click", startGame);
 endGameLoseButton.addEventListener("click", endGameLose);
+answerWord.onkeydown = function (e) {
+    if (gameStarted == true)
+        if (e.key == "Enter") {
+            checkWordButton.click();
+        }
+};
 checkWordButton.addEventListener("click", checkWord);
 refreshWordButton.addEventListener("click", refreshWord);
