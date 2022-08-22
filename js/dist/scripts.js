@@ -68,21 +68,23 @@ navLinks.forEach(link => {
 });
 //navLinks function
 function handleNavLinks(e) {
-    //currenttarget = li.
-    let currentTarget = e.currentTarget;
-    //check if currentTarget contains active class
-    //if yes remove.
-    //else add.
-    if (currentTarget.classList.contains("active")) {
-        currentTarget.classList.remove("active");
+    if (gameStarted == false) {
+        //currenttarget = li.
+        let currentTarget = e.currentTarget;
+        //check if currentTarget contains active class
+        //if yes remove.
+        //else add.
+        if (currentTarget.classList.contains("active")) {
+            currentTarget.classList.remove("active");
+        }
+        else {
+            currentTarget.classList.add("active");
+        }
+        //close li > ul when click on other li element by removing active from none clicked li.
+        navLinks.forEach(link => {
+            link !== currentTarget ? link.classList.remove("active") : "";
+        });
     }
-    else {
-        currentTarget.classList.add("active");
-    }
-    //close li > ul when click on other li element by removing active from none clicked li.
-    navLinks.forEach(link => {
-        link !== currentTarget ? link.classList.remove("active") : "";
-    });
 }
 //handle settings
 navLinksLI.forEach(link => {
@@ -219,6 +221,8 @@ function checkWord() {
 }
 function refreshWord() {
     gameStarted == true ? generateData() : "";
+}
+function winPopUp() {
 }
 //buttons events
 startGameButton.addEventListener("click", startGame);
