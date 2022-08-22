@@ -232,7 +232,7 @@ function refreshWord(){
 startGameButton.addEventListener("click",startGame);
 endGameLoseButton.addEventListener("click",endGameLose);
 answerWord.onkeydown = function(e){
-    if(gameStarted == true)
+    if(gameStarted == true && answerWord.value.length > 0)
     if(e.key == "Enter"){
         checkWordButton.click()
     }

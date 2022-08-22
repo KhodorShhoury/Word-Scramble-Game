@@ -193,7 +193,20 @@ input[type=number] {
   margin-bottom: 30px;
   margin-top: 10px;
 }
-.main .time-left .time {
+.main .reversed-word .hint span {
+  color: #242582;
+}
+.main .reversed-word .time-left .time {
+  color: #242582;
+}
+.main .settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.main .settings p span {
   color: #242582;
 }
 .main .inputs {

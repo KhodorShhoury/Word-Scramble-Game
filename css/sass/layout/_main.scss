@@ -25,13 +25,29 @@
                 bottom: 30px;
                 top: 10px;
             }
+            span{
+                color: $main-color;
+            }
+        }
+        .time-left{
+            .time{
+                color: $main-color;
+            }
         }
     }
-    .time-left{
-        .time{
-            color: $main-color;
+    .settings{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        p{
+            span{
+                color: $main-color;
+            }
         }
     }
+
     .inputs{
         width: 100%;
         display: flex;
