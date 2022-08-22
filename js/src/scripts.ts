@@ -139,7 +139,8 @@ function setDefaultGameSettings() : void{
     timeSetting.innerHTML = seconds.toString()
     languageSetting.innerHTML = language;
     wordsLengthSetting.innerHTML = mainData[0][level].length.toString();
-    solvedWordsSetting.innerHTML = solvedWords.length.toString();
+    solvedWordsSetting.innerHTML = (0).toString();
+    answerWord.value = "";
 }
 //start game function
 function startGame() : void{
@@ -225,7 +226,7 @@ function endGameLose(){
     timeLeft.innerHTML = seconds.toString()
     startGameButton.classList.add("active");
     endGameLoseButton.classList.remove("active");
-    answerWord.value = "";
+    setDefaultGameSettings()
 }
 function endGameWin(){
     gameStarted = false;
@@ -235,26 +236,27 @@ function endGameWin(){
     timeLeft.innerHTML = seconds.toString()
     startGameButton.classList.add("active");
     endGameLoseButton.classList.remove("active");
-    answerWord.value = "";
+    setDefaultGameSettings()
 }
 function checkWord(){
     if(gameStarted == true)
-    if(parseInt(wordsLengthSetting.innerHTML) !== solvedWords.length){
+
+    
         if(answerWord.value.toLowerCase() == currentWord.toLowerCase()){
             solvedWords.push(answerWord.value);
             answerWord.value = "";
             solvedWordsSetting.innerHTML = solvedWords.length.toString();
-            startGame()
+            if( parseInt(solvedWordsSetting.innerHTML) < parseInt(wordsLengthSetting.innerHTML) ){
+                startGame()
+            }else{
+                endGameWin()
+            }
+            
             
         }else{
             return false;
         }
-    }else{
-        endGameWin()
     }
-    
-}
-
 function refreshWord(){
     gameStarted == true ? generateData() : "";
 }
