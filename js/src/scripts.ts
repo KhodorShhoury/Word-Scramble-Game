@@ -105,7 +105,6 @@ navLinksLI.forEach(link => {
 });
 //select game settings function
 function selectSettings(e : any) : void{
-
     let currentTarget  = e.currentTarget;
     currentTarget
     .parentNode
